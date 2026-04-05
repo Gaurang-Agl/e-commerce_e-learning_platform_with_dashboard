@@ -4,6 +4,9 @@
   publish = "build"
   functions = "../backend/netlify/functions"
 
+[build.environment]
+  REACT_APP_API_URL = "/api"
+
 [functions]
   included_files = ["../backend/data/**"]
   node_bundler = "esbuild"
