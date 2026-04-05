@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Icons } from './Icons';
 import Modal from './Modal';
 
-const API_BASE = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
+const API_BASE = process.env.REACT_APP_API_URL || '/api';
 
 function StocksAvailability() {
   const [products, setProducts] = useState([]);

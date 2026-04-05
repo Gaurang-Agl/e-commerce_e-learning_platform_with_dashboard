@@ -34,4 +34,4 @@ app.use((err, req, res, next) => {
 });
 
 // Export as serverless handler
-module.exports.handler = serverless(app);
+module.exports.handler = serverless(app, { basePath: '/.netlify/functions' });
