@@ -7,7 +7,6 @@ export default function ProductsPage() {
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState('');
   const [category, setCategory] = useState('All');
-  const [selectedProduct, setSelectedProduct] = useState(null);
 
   useEffect(() => {
     fetch('/api/products')
@@ -77,15 +76,11 @@ export default function ProductsPage() {
         ) : (
           <div className="products-grid">
             {filtered.map((p, i) => (
-              <ProductCard key={p.id} product={p} onClick={setSelectedProduct} />
+              <ProductCard key={p.id} product={p} />
             ))}
           </div>
         )}
       </div>
-
-      {selectedProduct && (
-        <ProductModal product={selectedProduct} onClose={() => setSelectedProduct(null)} />
-      )}
     </div>
   );
 }

@@ -6,7 +6,6 @@ import { useToast } from '../context/ToastContext';
 export default function CoursesPage() {
   const [courses, setCourses] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [expandedCourse, setExpandedCourse] = useState(null);
   const { addCourse, isCourseInCart, openCart } = useCart();
   const toast = useToast();
   const navigate = useNavigate();
@@ -51,10 +50,11 @@ export default function CoursesPage() {
         <div className="courses-grid">
           {courses.map((course, i) => {
             const inCart = isCourseInCart(course.id);
+            const isEmoji = course.image.length <= 4 && !course.image.startsWith('http');
             return (
               <div className="course-card animate-fade-in" key={course.id}
                 style={{ animationDelay: `${i * 0.08}s`, cursor: 'pointer' }}
-                onClick={() => setExpandedCourse(expandedCourse === course.id ? null : course.id)}>
+                onClick={() => navigate(`/course/${course.id}`)}>
 
                 {course.badge && (
                   <div className="course-card-badge">
@@ -65,41 +65,21 @@ export default function CoursesPage() {
                   </div>
                 )}
 
-                <div className="course-icon">{course.image}</div>
+                <div className="course-icon" style={{ background: isEmoji ? `${course.color}12` : 'transparent', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  {isEmoji ? (
+                     <span style={{ filter: 'drop-shadow(0 4px 12px rgba(0,0,0,0.3))' }}>{course.image}</span>
+                  ) : (
+                     <img src={course.image} alt={course.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  )}
+                </div>
                 <h3>{course.title}</h3>
-                <p className="course-desc" style={expandedCourse === course.id ? {
-                  WebkitLineClamp: 'unset', display: 'block'
-                } : {}}>{course.description}</p>
+                <p className="course-desc" style={{ WebkitLineClamp: 2, display: '-webkit-box', WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{course.description}</p>
 
                 <div className="course-meta">
                   <span>👤 {course.instructor}</span>
                   <span>⏱️ {course.duration}</span>
                   <span>⭐ {course.rating}</span>
                 </div>
-
-                {/* Expanded modules */}
-                {expandedCourse === course.id && course.modules && (
-                  <div style={{
-                    marginBottom: 'var(--space-md)', padding: 'var(--space-md)',
-                    background: 'var(--bg-glass)', borderRadius: 'var(--radius-sm)',
-                    animation: 'slideDown 0.3s ease'
-                  }}>
-                    <div style={{ fontSize: '0.8rem', fontWeight: 600, color: 'var(--text-tertiary)',
-                      marginBottom: 'var(--space-sm)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-                      Course Modules
-                    </div>
-                    {course.modules.map((mod, j) => (
-                      <div key={j} style={{
-                        padding: '6px 0', fontSize: '0.85rem', color: 'var(--text-secondary)',
-                        borderBottom: j < course.modules.length - 1 ? '1px solid var(--border-subtle)' : 'none',
-                        display: 'flex', alignItems: 'center', gap: '8px'
-                      }}>
-                        <span style={{ color: 'var(--accent-primary)', fontSize: '0.7rem' }}>▸</span>
-                        {mod}
-                      </div>
-                    ))}
-                  </div>
-                )}
 
                 <div className="course-card-footer">
                   <div className="course-price">₹{course.price.toLocaleString()}</div>

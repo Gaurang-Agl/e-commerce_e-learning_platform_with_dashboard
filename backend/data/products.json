@@ -1,122 +1,171 @@
 [
   {
     "id": "prod-001",
-    "name": "Wireless Bluetooth Earbuds",
-    "description": "Premium TWS earbuds with active noise cancellation, 30-hour battery life, and IPX5 water resistance. Crystal-clear audio with deep bass.",
-    "price": 2499,
-    "category": "Electronics",
-    "stockQty": 24,
-    "image": "🎧",
-    "color": "#3b82f6"
+    "name": "Apple MacBook Pro M3",
+    "description": "14-inch, Apple M3 chip, 8-core CPU, 10-core GPU, 8GB Memory, 512GB SSD Storage - Space Black.",
+    "price": 159900,
+    "category": "Laptops",
+    "stockQty": 15,
+    "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800",
+    "images": [
+      "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800",
+      "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=800"
+    ],
+    "color": "#3b82f6",
+    "reviews": []
   },
   {
     "id": "prod-002",
-    "name": "Smart Watch Pro",
-    "description": "Advanced fitness tracker with AMOLED display, heart rate monitoring, SpO2 sensor, GPS, and 7-day battery life. 100+ watch faces.",
-    "price": 4999,
-    "category": "Electronics",
-    "stockQty": 15,
-    "image": "⌚",
-    "color": "#8b5cf6"
+    "name": "Apple MacBook Air M2",
+    "description": "15-inch, M2 chip, 8GB RAM, 256GB SSD, Liquid Retina display, macOS.",
+    "price": 114900,
+    "category": "Laptops",
+    "stockQty": 20,
+    "image": "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=800",
+    "images": [
+      "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=800"
+    ],
+    "color": "#10b981",
+    "reviews": []
   },
   {
     "id": "prod-003",
-    "name": "Portable Power Bank 20000mAh",
-    "description": "Ultra-slim 20000mAh power bank with 65W fast charging, dual USB-C ports, and LED display. Charges laptop and phone simultaneously.",
-    "price": 1799,
-    "category": "Electronics",
-    "stockQty": 40,
-    "image": "🔋",
-    "color": "#10b981"
+    "name": "Apple iPhone 15 Pro Max",
+    "description": "6.7-inch Super Retina XDR display, Titanium design, A17 Pro chip, 48MP main camera.",
+    "price": 159900,
+    "category": "Smartphones",
+    "stockQty": 30,
+    "image": "https://images.unsplash.com/photo-1696446701796-da6122d25032?w=800",
+    "images": [
+      "https://images.unsplash.com/photo-1696446701796-da6122d25032?w=800"
+    ],
+    "color": "#8b5cf6",
+    "reviews": []
   },
   {
     "id": "prod-004",
-    "name": "USB-C Hub Adapter 7-in-1",
-    "description": "Premium aluminum hub with HDMI 4K, 2x USB 3.0, USB-C PD 100W, SD/TF card reader, and ethernet port. Plug and play.",
-    "price": 1299,
-    "category": "Electronics",
-    "stockQty": 30,
-    "image": "🔌",
-    "color": "#f59e0b"
+    "name": "Apple iPhone 15",
+    "description": "6.1-inch display, A16 Bionic chip, Advanced dual-camera system.",
+    "price": 79900,
+    "category": "Smartphones",
+    "stockQty": 40,
+    "image": "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=800",
+    "images": [
+      "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=800"
+    ],
+    "color": "#f43f5e",
+    "reviews": []
   },
   {
     "id": "prod-005",
-    "name": "Premium Leather Laptop Sleeve",
-    "description": "Handcrafted genuine leather sleeve for 13-15\" laptops. Soft microfiber interior, magnetic closure, and accessory pocket.",
-    "price": 1999,
-    "category": "Accessories",
-    "stockQty": 20,
-    "image": "💼",
-    "color": "#ec4899"
+    "name": "Samsung Galaxy S24 Ultra",
+    "description": "6.8-inch Dynamic AMOLED 2X, Snapdragon 8 Gen 3, 200MP camera, S Pen included.",
+    "price": 129999,
+    "category": "Smartphones",
+    "stockQty": 25,
+    "image": "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=800",
+    "images": [
+      "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=800"
+    ],
+    "color": "#06b6d4",
+    "reviews": []
   },
   {
     "id": "prod-006",
-    "name": "Ergonomic Gel Mouse Pad",
-    "description": "Memory foam wrist rest with cooling gel technology. Non-slip rubber base, smooth fabric surface. Reduces wrist strain.",
-    "price": 699,
-    "category": "Accessories",
-    "stockQty": 50,
-    "image": "🖱️",
-    "color": "#06b6d4"
+    "name": "Samsung Galaxy S24 Plus",
+    "description": "6.7-inch display, AI features, 50MP camera, fast charging.",
+    "price": 99999,
+    "category": "Smartphones",
+    "stockQty": 35,
+    "image": "https://images.unsplash.com/photo-1585060544812-6b45742d762f?w=800",
+    "images": [
+      "https://images.unsplash.com/photo-1585060544812-6b45742d762f?w=800"
+    ],
+    "color": "#f59e0b",
+    "reviews": []
   },
   {
     "id": "prod-007",
-    "name": "Premium Silicone Phone Case",
-    "description": "Military-grade drop protection with soft-touch silicone finish. Compatible with MagSafe, raised camera bezels, and wireless charging.",
-    "price": 899,
-    "category": "Accessories",
-    "stockQty": 60,
-    "image": "📱",
-    "color": "#f43f5e"
+    "name": "Asus ROG Zephyrus G14",
+    "description": "14-inch QHD 165Hz gaming laptop, AMD Ryzen 9, NVIDIA RTX 4060, 16GB RAM, 1TB SSD.",
+    "price": 144990,
+    "category": "Laptops",
+    "stockQty": 10,
+    "image": "https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=800",
+    "images": [
+      "https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=800"
+    ],
+    "color": "#ec4899",
+    "reviews": []
   },
   {
     "id": "prod-008",
-    "name": "Cable Organizer Kit (12-Pack)",
-    "description": "Magnetic cable clips and velcro ties combo. Keep your desk tidy with premium cable management solution. Reusable and adjustable.",
-    "price": 499,
-    "category": "Accessories",
-    "stockQty": 45,
-    "image": "🔗",
-    "color": "#8b5cf6"
+    "name": "HP Spectre x360",
+    "description": "13.5-inch OLED touch 2-in-1, Intel Core i7, 16GB RAM, 1TB SSD.",
+    "price": 134990,
+    "category": "Laptops",
+    "stockQty": 12,
+    "image": "https://images.unsplash.com/photo-1537498425277-c2a13cc70868?w=800",
+    "images": [
+      "https://images.unsplash.com/photo-1537498425277-c2a13cc70868?w=800"
+    ],
+    "color": "#8b5cf6",
+    "reviews": []
   },
   {
     "id": "prod-009",
-    "name": "LED Smart Desk Lamp",
-    "description": "Touch-control LED lamp with 5 color temperatures, stepless dimming, USB charging port, and 30-minute auto-off timer. Eye-care technology.",
-    "price": 2299,
-    "category": "Home & Office",
+    "name": "Lenovo ThinkPad X1 Carbon",
+    "description": "14-inch ultralight business laptop, Intel Core i7, 16GB RAM, 512GB SSD, Windows 11 Pro.",
+    "price": 149990,
+    "category": "Laptops",
     "stockQty": 18,
-    "image": "💡",
-    "color": "#f59e0b"
+    "image": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=800",
+    "images": [
+      "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=800"
+    ],
+    "color": "#3b82f6",
+    "reviews": []
   },
   {
     "id": "prod-010",
-    "name": "Bamboo Monitor Stand",
-    "description": "Eco-friendly bamboo monitor riser with storage drawer and phone holder. Elevates screen to eye level. Supports up to 30kg.",
-    "price": 1599,
-    "category": "Home & Office",
-    "stockQty": 22,
-    "image": "🖥️",
-    "color": "#10b981"
+    "name": "Dell XPS 15",
+    "description": "15.6-inch 3.5K OLED touch, Intel Core i9, RTX 4070, 32GB RAM, 1TB SSD.",
+    "price": 189990,
+    "category": "Laptops",
+    "stockQty": 8,
+    "image": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=800",
+    "images": [
+      "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=800"
+    ],
+    "color": "#f59e0b",
+    "reviews": []
   },
   {
     "id": "prod-011",
-    "name": "Wireless Charging Pad 15W",
-    "description": "Fast wireless charger compatible with Qi devices. LED indicator, foreign object detection, and anti-slip design. Ultra-thin profile.",
-    "price": 999,
-    "category": "Home & Office",
-    "stockQty": 35,
-    "image": "⚡",
-    "color": "#4f8cff"
+    "name": "LG UltraGear 27\" 4K Monitor",
+    "description": "27-inch 4K UHD Nano IPS 144Hz 1ms Gaming Monitor with G-SYNC.",
+    "price": 54990,
+    "category": "Monitors",
+    "stockQty": 22,
+    "image": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800",
+    "images": [
+      "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800"
+    ],
+    "color": "#10b981",
+    "reviews": []
   },
   {
     "id": "prod-012",
-    "name": "Noise-Cancelling Headphones",
-    "description": "Over-ear wireless headphones with hybrid ANC, 40mm drivers, 60-hour battery, and multi-device connectivity. Premium comfort for all-day wear.",
-    "price": 6999,
-    "category": "Electronics",
-    "stockQty": 12,
-    "image": "🎵",
-    "color": "#6366f1"
+    "name": "Samsung Odyssey Neo G9 8K",
+    "description": "57-inch Dual UHD 8K 240Hz Mini LED Curved Gaming Monitor.",
+    "price": 199990,
+    "category": "Monitors",
+    "stockQty": 5,
+    "image": "https://images.unsplash.com/photo-1551645120-d70bfe84c826?w=800",
+    "images": [
+      "https://images.unsplash.com/photo-1551645120-d70bfe84c826?w=800"
+    ],
+    "color": "#6366f1",
+    "reviews": []
   }
 ]

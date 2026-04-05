@@ -1,7 +1,7 @@
 const express = require('express');
 const { v4: uuidv4 } = require('uuid');
 const db = require('../db');
-const { authMiddleware } = require('../middleware/auth');
+const { authMiddleware, optionalAuth } = require('../middleware/auth');
 
 const router = express.Router();
 
@@ -26,12 +26,21 @@ function maskCardNumber(number) {
 }
 
 // Create order — supports both products and courses
-router.post('/', authMiddleware, (req, res) => {
+router.post('/', optionalAuth, (req, res) => {
   try {
-    const { items, shippingInfo } = req.body;
+    const { items, shippingInfo, guestName, guestEmail } = req.body;
     if (!items || items.length === 0) {
       return res.status(400).json({ error: 'Cart is empty' });
     }
+
+    const isGuest = !req.user;
+    if (isGuest && (!guestName || !guestEmail)) {
+      return res.status(400).json({ error: 'Guest name and email are required for guest checkout' });
+    }
+
+    const userId = isGuest ? `guest-${uuidv4().slice(0, 8)}` : req.user.id;
+    const userName = isGuest ? guestName : req.user.name;
+    const userEmail = isGuest ? guestEmail : req.user.email;
 
     let total = 0;
     let hasPhysicalProducts = false;
@@ -39,7 +48,6 @@ router.post('/', authMiddleware, (req, res) => {
       const type = item.type || 'product';
 
       if (type === 'course') {
-        // Course item
         const course = db.findById('courses', item.courseId);
         if (!course) throw new Error(`Course ${item.courseId} not found`);
 
@@ -58,7 +66,6 @@ router.post('/', authMiddleware, (req, res) => {
           subtotal
         };
       } else {
-        // Product item
         hasPhysicalProducts = true;
         const product = db.findById('products', item.productId);
         if (!product) throw new Error(`Product ${item.productId} not found`);
@@ -82,9 +89,10 @@ router.post('/', authMiddleware, (req, res) => {
 
     const order = {
       id: `ORD-${Date.now().toString(36).toUpperCase()}`,
-      userId: req.user.id,
-      userName: req.user.name,
-      userEmail: req.user.email,
+      userId,
+      userName,
+      userEmail,
+      isGuest,
       items: orderItems,
       total,
       tax: Math.round(total * 0.18),

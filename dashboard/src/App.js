@@ -17,6 +17,7 @@ import HRPortal from './HRPortal';
 import StocksAvailability from './StocksAvailability';
 import InvoiceGenerated from './InvoiceGenerated';
 import EmailNotified from './EmailNotified';
+import UsersManagement from './UsersManagement';
 import './App.css';
 import './Modal.css';
 
@@ -35,6 +36,7 @@ const routes = [
   { path: '/stocks', breadcrumb: 'Stocks Availability', search: 'Search products...', element: <StocksAvailability /> },
   { path: '/invoices', breadcrumb: 'Invoice Generated', search: 'Search invoices...', element: <InvoiceGenerated /> },
   { path: '/emails', breadcrumb: 'Email Notified', search: 'Search emails...', element: <EmailNotified /> },
+  { path: '/users', breadcrumb: 'Users Management', search: 'Search registered users...', element: <UsersManagement /> },
 ];
 
 function App() {

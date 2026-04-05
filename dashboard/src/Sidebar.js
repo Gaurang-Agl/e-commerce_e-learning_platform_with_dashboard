@@ -41,6 +41,7 @@ function Sidebar({ isOpen, onClose }) {
         { to: '/stocks', label: 'Stocks Availability', icon: <Icons.Package /> },
         { to: '/invoices', label: 'Invoice Generated', icon: <Icons.FileText />, badge: ecomBadges.invoices || null },
         { to: '/emails', label: 'Email Notified', icon: <Icons.Mail />, badge: ecomBadges.emails || null },
+        { to: '/users', label: 'Users Management', icon: <Icons.Team /> },
       ]
     }
   ];

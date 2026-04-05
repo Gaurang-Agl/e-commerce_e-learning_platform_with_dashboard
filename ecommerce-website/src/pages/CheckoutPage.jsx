@@ -12,6 +12,7 @@ export default function CheckoutPage() {
   const navigate = useNavigate();
 
   const [shipping, setShipping] = useState({ address: '', city: '', pincode: '', state: '' });
+  const [guestInfo, setGuestInfo] = useState({ name: '', email: '' });
   const [processing, setProcessing] = useState(false);
   const [showPaymentModal, setShowPaymentModal] = useState(false);
 
@@ -38,6 +39,10 @@ export default function CheckoutPage() {
   }
 
   const handleInitiatePayment = () => {
+    if (!user && (!guestInfo.name || !guestInfo.email)) {
+      toast.error('Please provide your name and email for the receipt');
+      return;
+    }
     if (hasPhysicalProducts && (!shipping.address || !shipping.city || !shipping.pincode)) {
       toast.error('Please fill in all shipping details');
       return;
@@ -58,16 +63,20 @@ export default function CheckoutPage() {
         return { productId: item.productId, quantity: item.quantity, type: 'product' };
       });
 
+      const headers = { 'Content-Type': 'application/json' };
+      if (token && user) {
+        headers['Authorization'] = `Bearer ${token}`;
+      }
+
       // Step 1: Create order
       const orderRes = await fetch('/api/orders', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token}`
-        },
+        headers,
         body: JSON.stringify({
           items: orderItems,
-          shippingInfo: hasPhysicalProducts ? shipping : null
+          shippingInfo: hasPhysicalProducts ? shipping : null,
+          guestName: user ? undefined : guestInfo.name,
+          guestEmail: user ? undefined : guestInfo.email
         })
       });
 
@@ -112,6 +121,28 @@ export default function CheckoutPage() {
         <div className="checkout-layout">
           {/* Left — Forms */}
           <div>
+            {/* Guest Checkout Form */}
+            {!user && (
+              <div className="checkout-section">
+                <h3><span className="step-number" style={{ background: 'var(--accent-primary)', color: 'white' }}>*</span>Guest Information</h3>
+                <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginBottom: 'var(--space-md)' }}>
+                  Provide your details for order confirmation emails. <a onClick={() => navigate('/login')} style={{ color: 'var(--accent-primary)', cursor: 'pointer', fontWeight: 600 }}>Sign in</a> to save your order history.
+                </p>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'var(--space-md)' }}>
+                  <div className="form-group" style={{ margin: 0 }}>
+                    <label className="form-label">Full Name</label>
+                    <input className="form-input" placeholder="John Doe"
+                      value={guestInfo.name} onChange={e => setGuestInfo(s => ({ ...s, name: e.target.value }))} />
+                  </div>
+                  <div className="form-group" style={{ margin: 0 }}>
+                    <label className="form-label">Email Address</label>
+                    <input type="email" className="form-input" placeholder="john@example.com"
+                      value={guestInfo.email} onChange={e => setGuestInfo(s => ({ ...s, email: e.target.value }))} />
+                  </div>
+                </div>
+              </div>
+            )}
+            
             {/* Shipping — Only for physical products */}
             {hasPhysicalProducts && (
               <div className="checkout-section">
@@ -265,14 +296,14 @@ export default function CheckoutPage() {
                 </div>
               </div>
 
-              {user && (
+              {(user || guestInfo.name) && (
                 <div style={{
                   marginTop: 'var(--space-lg)', padding: 'var(--space-md)',
                   background: 'var(--bg-glass)', borderRadius: 'var(--radius-sm)',
                   fontSize: '0.82rem', color: 'var(--text-secondary)'
                 }}>
-                  <div style={{ fontWeight: 600, marginBottom: 4 }}>Ordering as:</div>
-                  <div>{user.name} ({user.email})</div>
+                  <div style={{ fontWeight: 600, marginBottom: 4 }}>{user ? 'Ordering as:' : 'Ordering as Guest:'}</div>
+                  <div>{user ? user.name : guestInfo.name} ({user ? user.email : guestInfo.email})</div>
                 </div>
               )}
             </div>
