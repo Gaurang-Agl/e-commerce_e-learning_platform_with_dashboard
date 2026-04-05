@@ -1,0 +1,29 @@
+[
+  {
+    "id": "da4cd4b4-8cff-497e-b156-b443df13b0ca",
+    "invoiceId": "54ef94e5-ee15-48a5-bf95-b6375f895500",
+    "orderId": "ORD-MNKM3KBO",
+    "userId": "ceac98c8-80ec-47e1-a6fd-df0edd126f68",
+    "toEmail": "gaurang@test.com",
+    "toName": "Gaurang Test",
+    "subject": "Order Confirmation & Invoice INV-2026-0001",
+    "body": "Dear Gaurang Test,\n\nThank you for your order!\n\nOrder ID: ORD-MNKM3KBO\nInvoice: INV-2026-0001\nTotal: ₹2,949\n\nItems:\n  🎧 Wireless Bluetooth Earbuds x1 — ₹2,499\n\nPayment: Card ending 4242\nStatus: Paid ✅\n\nYour order will be shipped within 2-3 business days.\n\nThank you for shopping with G Store!\n\nBest regards,\nG Workspace Team",
+    "status": "sent",
+    "sentAt": "2026-04-04T17:34:06.770Z"
+  },
+  {
+    "id": "37270f81-5e98-45ed-86ae-d744f92c963b",
+    "invoiceId": "839463c3-e0fd-411b-b8f3-aee493e276d7",
+    "orderId": "ORD-MNLM604W",
+    "userId": "4da00732-9d4c-4555-b30c-22a3613e90ac",
+    "toEmail": "test@demo.com",
+    "toName": "Test User",
+    "subject": "Order Confirmation & Invoice INV-2026-0002",
+    "body": "Dear Test User,\n\nThank you for your order!\n\nOrder ID: ORD-MNLM604W\nInvoice: INV-2026-0002\nTotal: ₹5,899\n\nItems:\n  📚 Full-Stack Web Development x1 — ₹4,999\n\nPayment: Visa •••• 4242\nCard Holder: TEST USER\nCard Number: 4242 •••• •••• 4242\nStatus: Paid ✅\n\nYour course access has been activated.\n\nThank you for shopping with G Store!\n\nBest regards,\nG Workspace Team",
+    "cardType": "Visa",
+    "maskedCardNumber": "4242 •••• •••• 4242",
+    "cardHolder": "TEST USER",
+    "status": "sent",
+    "sentAt": "2026-04-05T10:23:45.233Z"
+  }
+]

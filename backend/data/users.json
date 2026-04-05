@@ -1,0 +1,30 @@
+[
+  {
+    "id": "ceac98c8-80ec-47e1-a6fd-df0edd126f68",
+    "name": "Gaurang Test",
+    "email": "gaurang@test.com",
+    "passwordHash": "$2a$10$.junG/Yx6vMKeWvFXdB5Demvdvn4Xk8XUf7igrHfLoWAoaOHw6mvK",
+    "phone": "+91 9876543210",
+    "dept": "engineering",
+    "role": "Customer",
+    "initials": "GT",
+    "gradient": "linear-gradient(135deg, #ec4899, #8b5cf6)",
+    "status": "online",
+    "joined": "Apr 2026",
+    "createdAt": "2026-04-04T17:33:14.281Z"
+  },
+  {
+    "id": "4da00732-9d4c-4555-b30c-22a3613e90ac",
+    "name": "Test User",
+    "email": "test@demo.com",
+    "passwordHash": "$2a$10$qnBjKDnhEDSGMknBEXEw4e.p/5dxQazStUqHJvS.8RPf7HgENK.le",
+    "phone": "9876543210",
+    "dept": "customer",
+    "role": "Customer",
+    "initials": "TU",
+    "gradient": "linear-gradient(135deg, #f59e0b, #f43f5e)",
+    "status": "online",
+    "joined": "Apr 2026",
+    "createdAt": "2026-04-05T10:18:28.905Z"
+  }
+]

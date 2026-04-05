@@ -1,0 +1,65 @@
+[
+  {
+    "id": "ORD-MNKM3KBO",
+    "userId": "ceac98c8-80ec-47e1-a6fd-df0edd126f68",
+    "userName": "Gaurang Test",
+    "userEmail": "gaurang@test.com",
+    "items": [
+      {
+        "productId": "prod-001",
+        "name": "Wireless Bluetooth Earbuds",
+        "price": 2499,
+        "quantity": 1,
+        "image": "🎧",
+        "subtotal": 2499
+      }
+    ],
+    "total": 2499,
+    "tax": 450,
+    "grandTotal": 2949,
+    "shippingInfo": {
+      "address": "42 Tech Park, Electronic City",
+      "city": "Bangalore",
+      "pincode": "560100",
+      "state": "Karnataka"
+    },
+    "status": "confirmed",
+    "paymentStatus": "paid",
+    "createdAt": "2026-04-04T17:34:05.220Z",
+    "paymentMethod": "Card ending 4242",
+    "paidAt": "2026-04-04T17:34:06.755Z"
+  },
+  {
+    "id": "ORD-MNLM604W",
+    "userId": "4da00732-9d4c-4555-b30c-22a3613e90ac",
+    "userName": "Test User",
+    "userEmail": "test@demo.com",
+    "items": [
+      {
+        "courseId": "course-001",
+        "name": "Full-Stack Web Development",
+        "price": 4999,
+        "quantity": 1,
+        "image": "💻",
+        "type": "course",
+        "instructor": "Sarah Chen",
+        "duration": "40 hours",
+        "subtotal": 4999
+      }
+    ],
+    "total": 4999,
+    "tax": 900,
+    "grandTotal": 5899,
+    "shippingInfo": null,
+    "hasPhysicalProducts": false,
+    "status": "confirmed",
+    "paymentStatus": "paid",
+    "createdAt": "2026-04-05T10:23:45.200Z",
+    "paymentMethod": "Visa ending 4242",
+    "cardType": "Visa",
+    "maskedCardNumber": "4242 •••• •••• 4242",
+    "cardHolder": "TEST USER",
+    "cardExpiry": "12/28",
+    "paidAt": "2026-04-05T10:23:45.220Z"
+  }
+]
