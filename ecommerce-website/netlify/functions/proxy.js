@@ -6,9 +6,9 @@
  */
 
 export const handler = async (event) => {
-  // Extract path parameters from the proxy route
-  // E.g., if /api/products, event.path ends up capturing the path after /api/
-  const apiPath = event.path.replace('/.netlify/functions/proxy', '');
+  // Extract path parameters from the original requested route
+  // E.g., if /api/products, event.path is /api/products so we remove /api
+  const apiPath = event.path.replace('/api', '');
   const targetUrl = process.env.SHARED_API_URL || 'http://localhost:5000/api';
   
   // Construct the absolute remote URL

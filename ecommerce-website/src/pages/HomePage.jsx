@@ -172,7 +172,7 @@ export default function HomePage() {
           <p style={{ color: 'var(--text-secondary)', marginBottom: 'var(--space-xl)', maxWidth: 500, margin: '0 auto var(--space-xl)' }}>
             Manage your team, track orders, monitor stock, view invoices, and more from the G Workspace Dashboard.
           </p>
-          <a href="https://gaurang-dashboard.netlify.app" target="_blank" rel="noopener noreferrer"
+          <a href="https://gaurang-workspace.netlify.app" target="_blank" rel="noopener noreferrer"
             className="btn btn-primary btn-lg">
             Open Dashboard ↗
           </a>

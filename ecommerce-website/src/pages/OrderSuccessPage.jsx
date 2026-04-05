@@ -198,7 +198,7 @@ export default function OrderSuccessPage() {
           <Link to="/orders" className="btn btn-secondary">📦 View Orders</Link>
           <Link to="/products" className="btn btn-primary">🛍️ Continue Shopping</Link>
           <Link to="/courses" className="btn btn-secondary">📚 Browse Courses</Link>
-          <a href="https://gaurang-dashboard.netlify.app" target="_blank" rel="noopener noreferrer" className="btn btn-ghost">
+          <a href="https://gaurang-workspace.netlify.app" target="_blank" rel="noopener noreferrer" className="btn btn-ghost">
             Dashboard ↗
           </a>
         </div>
